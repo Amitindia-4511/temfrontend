@@ -1,0 +1,78 @@
+ <main className="grid h-screen p-1">
+        {/* <aside className="w-1/4 bg-zinc-800 p-3 overflow-auto">
+          {user1Messages.map((user) => (
+            <div
+              key={user.sender}
+              className="flex items-center bg-slate-600 p-1 my-1 rounded-md"
+            >
+              <div className="avatar online placeholder mx-3 ">
+                <div className="bg-neutral text-neutral-content w-16 rounded-full">
+                  <span className="text-xl">{user.sender}</span>
+                </div>
+              </div>
+              <span className="text-xl">Amit</span>
+            </div>
+          ))}
+        </aside> */}
+        <div className=" overflow-auto m-1">
+          <div className="bg-zinc-900 p-1 rounded-md shadow-lg">
+            {/* Chat Messages */}
+            {user1Messages.map((messages) => {
+              return (
+                <div className="chat chat-start" key={messages.sender}>
+                  <div className="chat-image avatar">
+                    <div className="w-10 rounded-full">
+                      <img
+                        alt="Tailwind CSS chat bubble component"
+                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      />
+                    </div>
+                  </div>
+                  <div className="chat-header">
+                    Amit
+                    <time className="text-xs opacity-50">12:45</time>
+                  </div>
+                  <div className="chat-bubble">{messages.text}</div>
+                  <div className="chat-footer opacity-50">Delivered</div>
+                </div>
+              );
+            })}
+            {user2Messages.map((messages) => {
+              return (
+                <div className="chat chat-end" key={messages.sender}>
+                  <div className="chat-image avatar">
+                    <div className="w-10 rounded-full">
+                      <img
+                        alt="Tailwind CSS chat bubble component"
+                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      />
+                    </div>
+                  </div>
+                  <div className="chat-header">
+                    Anakin
+                    <time className="text-xs opacity-50">12:46</time>
+                  </div>
+                  <div className="chat-bubble">{messages.text}</div>
+                  <div className="chat-footer opacity-50">Seen at 12:46</div>
+                </div>
+              );
+            })}
+
+            {/* Input Field for Sending Messages */}
+            <div className="">
+              <input
+                type="text"
+                className="w-full p-3 outline-none rounded-lg border border-zinc-700"
+                placeholder="Type a message..."
+              />
+              <button className="rounded-md bg-stone-950 p-2 mx-1">
+                <VscSend className="text-3xl" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="flex-1 mx-1">
+         
+        </div> */}
+      </main>
