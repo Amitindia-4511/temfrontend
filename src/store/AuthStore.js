@@ -6,7 +6,7 @@ import io from "socket.io-client";
 import { redirect } from "react-router-dom";
 import { server } from "../constants/config";
 
-const BASE_URL = "https://projecthammbackend.onrender.com";
+const BASE_URL = "https://tempbackend-47ip.onrender.com";
 
 export const useAuthStore = create(
   persist(
